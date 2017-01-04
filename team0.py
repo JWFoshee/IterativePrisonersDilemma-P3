@@ -6,6 +6,7 @@
 #     move: A function that returns 'c' or 'b'
 ####
 
+team_name = 'Mannschaft' # Eric Gluck and Jason Hauser
 strategy_name = 'Reciprocation'
 strategy_description = "Copies the partner's move from the previous iteration."
     
@@ -25,7 +26,10 @@ def move(my_history, their_history, my_score, their_score):
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
     
-    return 'c'
+    if len(their_history)==0:
+        return their_history[-1]
+    else:
+        return 'c'
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
