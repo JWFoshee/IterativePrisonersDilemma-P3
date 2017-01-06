@@ -1,18 +1,13 @@
-####
-# Each team's file must define four tokens:
-#     team_name: a string
-#     strategy_name: a string
-#     strategy_description: a string
-#     move: A function that returns 'c' or 'b'
-####
+ # move: A function that returns 'c' or 'b'
+ ####
 
-team_name = 'The name the team gives to itself' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+ + team_name = 'Battlestar' # sterling and carlton
+strategy_name = 'Suffacation'
+strategy_description = "Does what my partner would do previously."
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
-    my_score, their_score are ints.
+    
     
     Make my move.
     Returns 'c' or 'b'. 
