@@ -7,8 +7,8 @@
 ####
 
 team_name = 'Mannschaft' # Eric Gluck and Jason Hauser
-strategy_name = 'Reciprocation'
-strategy_description = "Copies the partner's move from the previous iteration."
+strategy_name = "What Could've Been Something Other Than Betrayal but Wasn't"
+strategy_description = "Do something which is not something other than betrayal on every round."
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -25,11 +25,10 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
-    
-    if len(their_history)==0:
-        return their_history[-1]
-    else:
+    if len(my_history) == len(their_history) and (my_score < their_score and their_score < my_score):
         return 'c'
+    else:
+        return 'b'
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
